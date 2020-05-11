@@ -2,12 +2,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+
 int rand(int a, int b) {
-    return a + rand() % (b - a + 1);
+    return a + rng() % (b - a + 1);
 }
 
-int main(int argc, char* argv[]) {
-    srand(atoi(argv[1]));
+int main() {
+    
     int n = rand(2, 20);
     printf("%d\n", n);
     vector<pair<int,int>> edges;
