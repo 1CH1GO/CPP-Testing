@@ -9,7 +9,7 @@ int rand(int a, int b) {
 }
 
 int main() {
-    
+
     int n = rand(2, 20);
     printf("%d\n", n);
     vector<pair<int,int>> edges;
@@ -27,7 +27,7 @@ int main() {
     
     for(pair<int, int> edge : edges) {
         int a = edge.first, b = edge.second;
-        if(rand() % 2) {
+        if(rng() % 2) {
             swap(a, b); // random order of two vertices
         }
         printf("%d %d\n", perm[a], perm[b]);
